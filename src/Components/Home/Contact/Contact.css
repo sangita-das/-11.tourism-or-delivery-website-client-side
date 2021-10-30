@@ -1,0 +1,17 @@
+.contact{
+  background-color: rgb(219, 236, 236);
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.contact-info {
+ 
+  padding: 50px;
+  color: rgb(60, 79, 119);
+}
+.phone-icon {
+  font-size: 30px;
+  color: rgb(255, 94, 0);
+}

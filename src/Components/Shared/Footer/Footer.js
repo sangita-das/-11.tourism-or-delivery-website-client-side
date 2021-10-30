@@ -31,8 +31,8 @@ const Footer = () => {
 
                     <Nav.Link as={Link} to="/home#home" className="text-light">Home</Nav.Link>
                     <Nav.Link as={Link} to="/about#about" className="text-light">About Us</Nav.Link>
-                    <Nav.Link as={Link} to="/package offer#package offer" className="text-light">Package Offer</Nav.Link>
-                    <Nav.Link as={Link} to="/accommodation#accommodation" className="text-light">Accommodation</Nav.Link>
+                    <Nav.Link as={Link} to="/services#services" className="text-light">Services</Nav.Link>
+                    <Nav.Link as={Link} to="/adminDashboard#adminDashboard" className="text-light">Admin</Nav.Link>
                     <Nav.Link as={Link} to="/contacts#contacts" className="text-light">Contact</Nav.Link>
 
                   </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faPhoneVolume} />
                   </div>
                   <div>
-                    <h5>+49 7520 555 85 77</h5>
+                    <h5>001 998 657 4444</h5>
                   </div>
                 </div>
                 <div className="map d-flex align-items-center justify-content-center">
@@ -97,7 +97,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-center">
-                      © 1996-2021, cholo.ghuri@.com, Inc. or its affiliates,
+                      © 1996-2021, cholo.ghuri@gmail.com, Inc. or its affiliates,
                       <br /> 102 1st Avenue, New York, NY 101
                     </p>
                   </div>

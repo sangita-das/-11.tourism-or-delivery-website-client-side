@@ -2,8 +2,9 @@ import React from 'react';
 
 const Cart = (props) => {
   // Destructuring object
-  const { img, name, BDT } = props.detail;
+  const { img, name, BDT } = props.service;
   return (
+
 
     <div className="d-flex align-items-center shadow-sm mt-3 px-2">
       <div className="w-25">

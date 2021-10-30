@@ -7,9 +7,15 @@ import NotFound from './Components/NotFound/NotFound';
 import Booking from './Components/Home/Booking/Booking';
 import Contact from './Components/Home/Contact/Contact';
 import About from './Components/Home/About/About';
-// import Topbar from './Components/Home/Home/Topbar/Topbar';
 import Topbar from './Components/Home/Topbar/Topbar';
 import Services from './Components/Home/Detail/Services/Services';
+import AddServices from './Components/Orders/AddServices/AddServices';
+import AdminDashboard from './Components/Orders/Admin/AdminDashboard/AdminDashboard';
+import AddClients from './Components/Orders/AddClients/AddClients';
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import AuthProvider from './contexts/AuthProvider';
+import MyOrders from './Components/Orders/MyOrders/MyOrders';
+import ManageServices from './Components/Orders/Admin/ManageServices/ManageServices';
 
 
 
@@ -18,41 +24,78 @@ function App() {
     <div className="App">
 
 
-      <Router>
-        <Topbar></Topbar>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
+      <AuthProvider>
+        <Router>
+          <Topbar></Topbar>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
 
-          <Route path="/about">
-            <About></About>
-          </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
 
-          <Route path="/services">
-            <Services></Services>
-          </Route>
+            <PrivateRoute path="/contact">
+              <Contact></Contact>
+            </PrivateRoute>
 
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route path="/booking">
-            <Booking></Booking>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
+            <Route path="/services">
+              <Services></Services>
+            </Route>
 
-      </Router>
 
+
+            <Route exact path="/addServices">
+              <AddServices></AddServices>
+            </Route>
+            <PrivateRoute exact path="/adminDashboard">
+              <AdminDashboard></AdminDashboard>
+            </PrivateRoute>
+            <Route exact path="/addClients">
+              <AddClients></AddClients>
+            </Route>
+            <Route exact path="/myOrders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route exact path="/addServices">
+              <AddServices></AddServices>
+            </Route>
+            <Route exact path="/addClients">
+              <AddClients></AddClients>
+            </Route>
+            <Route exact path="/manageServices">
+              <ManageServices></ManageServices>
+            </Route>
+
+
+
+
+
+
+
+
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/booking">
+              <Booking></Booking>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+
+        </Router>
+
+      </AuthProvider>
 
     </div>
   );
