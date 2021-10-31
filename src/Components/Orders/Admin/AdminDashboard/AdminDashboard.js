@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import AddServices from "../../AddServices/AddServices";
 import "./AdminDashboard.css";
-import Services from "./../../../Home/Detail/Services/Services";
-import AllClients from "./../AllClients/AllClients";
+
+
 import AddClients from "../../AddClients/AddClients";
 import ManageServices from "../ManageServices/ManageServices";
 
 
 const AdminDashboard = () => {
-  const [control, setControl] = useState("allClients");
+  const [control, setControl] = useState("addClients");
 
   console.log(control);
   return (
@@ -24,19 +24,19 @@ const AdminDashboard = () => {
                     onClick={() => setControl("addClients")}
                     className="admin-menu p-2"
                   >
-                    Clients
+                    Registration
                   </li>
                   <li
                     onClick={() => setControl("addServices")}
                     className="admin-menu p-2"
                   >
-                    Add Places
+                    Booking
                   </li>
                   <li
                     onClick={() => setControl("manageServices")}
                     className="admin-menu p-2"
                   >
-                    Manage Services
+                    Manage Booking
                   </li>
                 </div>
               </div>

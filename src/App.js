@@ -4,7 +4,6 @@ import Header from './Components/Shared/Header/Header';
 import Home from './Components/Home/Home/Home';
 import Login from './Components/Login/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
-import Booking from './Components/Home/Booking/Booking';
 import Contact from './Components/Home/Contact/Contact';
 import About from './Components/Home/About/About';
 import Topbar from './Components/Home/Topbar/Topbar';
@@ -16,6 +15,8 @@ import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import MyOrders from './Components/Orders/MyOrders/MyOrders';
 import ManageServices from './Components/Orders/Admin/ManageServices/ManageServices';
+import Carts from './Components/Home/Detail/Carts/Carts';
+
 
 
 
@@ -60,32 +61,20 @@ function App() {
             <Route exact path="/addClients">
               <AddClients></AddClients>
             </Route>
-            <Route exact path="/myOrders">
+            <PrivateRoute exact path="/myOrders">
               <MyOrders></MyOrders>
-            </Route>
-            <Route exact path="/addServices">
+            </PrivateRoute>
+            <PrivateRoute exact path="/addServices">
               <AddServices></AddServices>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/addClients">
               <AddClients></AddClients>
             </Route>
-            <Route exact path="/manageServices/:serviceKey">
+            <PrivateRoute exact path="/manageServices/:serviceKey">
               <ManageServices></ManageServices>
-            </Route>
+            </PrivateRoute>
 
 
-
-
-
-
-
-
-            <Route path="/contact">
-              <Contact></Contact>
-            </Route>
-            <Route path="/booking">
-              <Booking></Booking>
-            </Route>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

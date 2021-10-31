@@ -1,6 +1,8 @@
+import Button from "@restart/ui/esm/Button";
 import React from "react";
 import { useForm } from "react-hook-form";
 import useFirebase from "../../../hooks/useFirebase";
+import Service from "../../Home/Detail/Service/Service";
 
 
 const AddServices = () => {
@@ -8,24 +10,29 @@ const AddServices = () => {
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    data.email = user?.email;
-    fetch("http://localhost:5000/service", {
-      method: "POST",
+  const updateInfo = {
+    status: "Approved"
+  }
+
+  const onSubmit = (key) => {
+    key.email = user?.email;
+    fetch(`http://localhost:5000/service${key}`, {
+      method: "PUT",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(updateInfo),
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
-    console.log(data);
+    alert('your booking has been completed successfully!!')
+    console.log(key);
   };
   return (
     <div>
-      <h1 className="mt-5 text-center text-dark">For Booking Our Offering Packages, Please Add to Your Wish List</h1>
+      <h1 className="mt-5 text-center text-dark">Register for booking our upcoming packages</h1>
       <div className="login-box w-25 m-auto mt-5">
         <div className="event-box border border d-flex justify-content-center align-items-center">
           <div className="login-form">
@@ -77,7 +84,9 @@ const AddServices = () => {
 
               {errors.exampleRequired && <span>This field is required</span>}
 
-              <input type="submit" value="Add" className="btn btn-info w-50" />
+              <input type="submit" value="Approve" className="btn btn-info w-50" />
+
+
             </form>
           </div>
         </div>

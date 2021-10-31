@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
+import Cart from '../../../Home/Detail/Cart/Cart';
 import Carts from '../../../Home/Detail/Carts/Carts';
 
 const ManageServices = () => {
@@ -44,10 +47,14 @@ const ManageServices = () => {
           alert('deleted')
           setServices(data);
         }
+
       })
   }
 
   return (
+
+
+
     <div className="container shadow p-4 rounded">
       <h4> This is booking no: {serviceKey} </h4>
       <div>
@@ -63,11 +70,24 @@ const ManageServices = () => {
           <p>Email: {services?.Email}</p>
         </div>
 
-        <button onClick={() => handleDelete(services._id)}>Delete</button>
+        <div className=" p-4 rounded">
 
+          <Link to="/addServices">
+            <button className="me-3 btn btn-success"> Procedd Order</button>
+
+          </Link>
+
+
+          <button onClick={() => handleDelete(services._id)} className="btn btn-danger">Delete</button>
+        </div>
+
+
+
+        <Link to="/services"> <button>Add service</button> </Link>
       </div>
-      {/* displaying selected resort */}
-      <Carts carts={carts}></Carts>
+
+
+
     </div>
   );
 };

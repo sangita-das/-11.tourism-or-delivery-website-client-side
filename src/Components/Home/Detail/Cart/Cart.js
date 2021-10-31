@@ -18,7 +18,7 @@ const Cart = (props) => {
       <div>
 
         <Link to={`/manageServices/${_id}`}>
-          <button className="btn btn-warning m-5 ">Confirm Booking</button>
+          <button className="btn btn-warning m-5 ">Service Details</button>
         </Link>
 
       </div>

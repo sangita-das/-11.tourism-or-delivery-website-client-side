@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useFirebase from "../../../hooks/useFirebase";
+import Service from "../../Home/Detail/Service/Service";
 
 
 const AddClients = () => {
+  const nameRef = useRef();
   const { user } = useFirebase();
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -21,10 +23,12 @@ const AddClients = () => {
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
+    alert(' Successfully Registered')
     console.log(data);
   };
   return (
     <div>
+      <h3>Client:{Service.length}</h3>
       <h1 className="mt-5 text-center text-info">
         Do You want to register As Tourist team client?
       </h1>
@@ -39,7 +43,7 @@ const AddClients = () => {
               <input
                 {...register("name")}
                 placeholder="Name"
-                className="p-2 m-2"
+                className="p-2 m-2" ref={nameRef}
               />
               <br />
 

@@ -33,7 +33,7 @@ const Footer = () => {
                     <Nav.Link as={Link} to="/about#about" className="text-light">About Us</Nav.Link>
                     <Nav.Link as={Link} to="/services#services" className="text-light">Services</Nav.Link>
                     <Nav.Link as={Link} to="/adminDashboard#adminDashboard" className="text-light">Admin</Nav.Link>
-                    <Nav.Link as={Link} to="/contacts#contacts" className="text-light">Contact</Nav.Link>
+
 
                   </div>
                 </div>

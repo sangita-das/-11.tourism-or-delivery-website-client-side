@@ -30,7 +30,7 @@ const Services = () => {
 
   return (
 
-    <div className="row mt-5">
+    <div className="row mt-5 ms-5">
       <div className="col-md-9">
         <div className="row">
           {

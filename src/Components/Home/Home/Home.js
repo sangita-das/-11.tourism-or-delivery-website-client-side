@@ -33,6 +33,7 @@ const Home = () => {
       // Adding new resort to the list
       const newCartAddedList = [...carts, service];
       setCarts(newCartAddedList);
+
     }
   }
 
@@ -61,7 +62,7 @@ const Home = () => {
       </div>
 
 
-      <h2 className="text-primary fw-bold">PERFECT TOURS</h2>
+      <h2 className="text-primary fw-bold">Upcoming TOURS</h2>
 
       <p className="fw-bold">All our services are given here. Choose your desire dream destination and click the book-now button <br /> for adding our special package service in your cart. Happy Travelling.</p>
 
