@@ -63,7 +63,7 @@ const ManageServices = () => {
           <img src={services?.img} alt="" />
         </div>
         <div className="col-md-4 text-brand text-center">
-          <h4>Resort Nmae: {services?.name}</h4>
+          <h4>Resort Name: {services?.name}</h4>
           <h4>Location: {services?.address}</h4>
           <p>{services?.description}</p>
           <p>Price: {services?.BDT}</p>
