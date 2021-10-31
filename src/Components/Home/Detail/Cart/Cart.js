@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
   // Destructuring object
-  const { img, name, BDT } = props.service;
+  const { _id, img, name, BDT } = props.service;
   return (
 
 
@@ -13,6 +14,13 @@ const Cart = (props) => {
       <div className="w-75 ms-3">
         <h6>{name}</h6>
         <p>Cost: {BDT} tk</p>
+      </div>
+      <div>
+
+        <Link to={`/manageServices/${_id}`}>
+          <button className="btn btn-warning m-5 ">Confirm Booking</button>
+        </Link>
+
       </div>
 
     </div>

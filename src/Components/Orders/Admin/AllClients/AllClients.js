@@ -4,8 +4,8 @@ const AllServices = () => {
   const [service, setService] = useState([]);
 
   useEffect(() => {
-    // fetch("http://localhost:5000/allService")
-    fetch('/resort.json')
+    fetch("http://localhost:5000/service")
+      // fetch('/resort.json')
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);

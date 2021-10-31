@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import banner1 from '../../../images/Banner/Banner1.jpg';
 import banner2 from '../../../images/Banner/Banner2.jpg';
 import banner3 from '../../../images/Banner/Banner3.jpg';
+import './Banner.css'
 
 
 
@@ -13,7 +14,7 @@ const Banner = () => {
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100 "
+            className="d-block w-100 banner-img"
             src={banner1}
             alt="First slide"
           />
@@ -36,7 +37,7 @@ const Banner = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100 "
+            className="d-block w-100 banner-img"
             src={banner2}
             alt="Second slide"
           />
@@ -59,7 +60,7 @@ const Banner = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100 "
+            className="d-block w-100 banner-img"
             src={banner3}
             alt="Third slide"
           />

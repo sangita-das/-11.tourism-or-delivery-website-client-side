@@ -12,7 +12,7 @@ const Services = () => {
 
   // fetching data
   useEffect(() => {
-    fetch('/resort.json')
+    fetch('http://localhost:5000/service')
       .then(res => res.json())
       .then(data => setServices(data))
   }, []);
@@ -35,7 +35,7 @@ const Services = () => {
         <div className="row">
           {
             // Displaying resort services
-            services.map(service => <Service key={service.key} handleAddToList={handleAddToList} service={service}></Service>)
+            services.map(service => <Service key={service._id} handleAddToList={handleAddToList} service={service}></Service>)
           }
         </div>
       </div>

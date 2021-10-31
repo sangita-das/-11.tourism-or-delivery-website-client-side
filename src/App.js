@@ -53,9 +53,7 @@ function App() {
 
 
 
-            <Route exact path="/addServices">
-              <AddServices></AddServices>
-            </Route>
+
             <PrivateRoute exact path="/adminDashboard">
               <AdminDashboard></AdminDashboard>
             </PrivateRoute>
@@ -71,7 +69,7 @@ function App() {
             <Route exact path="/addClients">
               <AddClients></AddClients>
             </Route>
-            <Route exact path="/manageServices">
+            <Route exact path="/manageServices/:serviceKey">
               <ManageServices></ManageServices>
             </Route>
 

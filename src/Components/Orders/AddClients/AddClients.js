@@ -14,7 +14,7 @@ const AddClients = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("/resort.json/", {
+    fetch("http://localhost:5000/service", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

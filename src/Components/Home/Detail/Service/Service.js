@@ -45,7 +45,8 @@ const Service = (props) => {
             </tbody>
             <tfoot></tfoot>
           </table>
-          <button className="btn btn-primary mt-4" onClick={() => props.handleAddToList(props.service)}><i className="fas fa-user-plus"></i> Book Now</button>
+          <button className="btn btn-primary mt-4" onClick={() => props.handleAddToList(props.service)}><i className="fas fa-user-plus"></i> Add to list</button>
+
         </div>
       </div>
     </div>

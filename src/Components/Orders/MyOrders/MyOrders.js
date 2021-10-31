@@ -6,7 +6,7 @@ const MyOrders = () => {
   const { user } = useFirebase();
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch(`/resort.json/${user?.email}`)
+    fetch(`http://localhost:5000/service/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user.email]);

@@ -14,7 +14,7 @@ const AddServices = () => {
 
   const onSubmit = (data) => {
     data.email = user?.email;
-    fetch("/resort.json/", {
+    fetch("http://localhost:5000/service", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -36,12 +36,7 @@ const AddServices = () => {
                 className="p-2 m-2 w-100"
               />
               <br />
-              <input
-                {...register("Resort-Name")}
-                placeholder="Resort-Name"
-                className="p-2 m-2 w-100"
-              />
-              <br />
+
               <input
                 {...register("date")}
                 type="date"
@@ -53,6 +48,13 @@ const AddServices = () => {
                 placeholder="Duration"
                 className="p-2 m-2 w-100"
 
+              />
+              <br />
+              <input
+                {...register("image", { required: true })}
+                placeholder="Image Link"
+                className="p-2 m-2"
+                className="p-2 m-2 w-100"
               />
               <br />
               <input
