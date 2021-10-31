@@ -20,7 +20,7 @@ const AddServices = () => {
 
   const onSubmit = (key) => {
     key.email = user?.email;
-    fetch(`http://localhost:5000/service${key}`, {
+    fetch(`https://guarded-springs-48893.herokuapp.com/service${key}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updateInfo),

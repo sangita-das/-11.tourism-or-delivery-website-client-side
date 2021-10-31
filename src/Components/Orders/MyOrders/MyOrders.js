@@ -22,7 +22,7 @@ const MyOrders = () => {
     const newUser = { name: name, email: email }
 
     // send data to the server
-    fetch('http://localhost:5000/users', {
+    fetch('https://guarded-springs-48893.herokuapp.com/users', {
       method: 'post',
       headers: {
         'content-type': 'application/json'
@@ -49,18 +49,6 @@ const MyOrders = () => {
 
 
 
-
-
-
-  // const { user } = useFirebase();
-  // const [orders, setOrders] = useState([]);
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/service/${user?.email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setOrders(data));
-  // }, [user.email]);
-
-  // console.log(orders);
 
   return (
     <div className="">
